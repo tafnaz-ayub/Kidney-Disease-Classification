@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: cnnClassifier
+Version: 0.0.0
+Summary: A small python package for cnn
+Home-page: https://github.com/tafnaz-ayub/Kidney-Disease-Classification
+Author: tafnaz-ayub
+Author-email: ayubtafnaz@gmail.com
+Project-URL: Bug Tracker, https://github.com/tafnaz-ayub/Kidney-Disease-Classification/issues
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: project-url
+Dynamic: summary
