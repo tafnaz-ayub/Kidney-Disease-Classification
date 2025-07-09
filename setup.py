@@ -5,7 +5,7 @@ __version__ = "0.0.0"
 
 REPO_NAME = "Kidney-Disease-Classification"
 AUTHOR_USER_NAME = "tafnaz-ayub"
-SRC_REPO = "cnnClassifier"
+SRC_REPO = "cnnClassifier" #making this as local package from which anything can be imported easily
 AUTHOR_EMAIL="ayubtafnaz@gmail.com"
 
 setuptools.setup(
