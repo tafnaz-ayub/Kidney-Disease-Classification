@@ -1,1 +1,214 @@
 [2025-07-07 05:25:09,794: INFO: main: Welcome to our custom log]
+[2025-07-10 04:51:27,795: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-10 04:51:27,823: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-10 04:51:27,827: INFO: common: craeted directory at:artifacts_root]
+[2025-07-10 04:51:27,831: INFO: common: craeted directory at:artifacts/data_ingestion]
+[2025-07-10 04:51:27,834: INFO: 2112224593: Downloading data from https://drive.google.com/file/d/1Vqh5Kn5aNg9qM2XMi3uvbwxaB9GJMpvd/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-10 05:04:35,482: INFO: 2112224593: Downloaded data from https://drive.google.com/file/d/1Vqh5Kn5aNg9qM2XMi3uvbwxaB9GJMpvd/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-10 05:13:17,438: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-10 05:13:17,443: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-10 05:13:17,446: INFO: common: craeted directory at:artifact]
+[2025-07-10 05:13:17,448: INFO: common: craeted directory at:artifacts/data_ingestion]
+[2025-07-10 05:13:17,452: INFO: 4158922119: Downloading data from https://drive.google.com/file/d/1Vqh5Kn5aNg9qM2XMi3uvbwxaB9GJMpvd/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-10 05:30:31,857: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-10 05:30:31,874: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-10 05:30:31,877: INFO: common: craeted directory at:artifacts]
+[2025-07-10 05:30:31,880: INFO: common: craeted directory at:artifacts/data_ingestion]
+[2025-07-10 05:30:31,884: INFO: 4158922119: Downloading data from https://drive.google.com/file/d/1Vqh5Kn5aNg9qM2XMi3uvbwxaB9GJMpvd/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-10 05:37:04,169: INFO: 4158922119: Downloaded data from https://drive.google.com/file/d/1Vqh5Kn5aNg9qM2XMi3uvbwxaB9GJMpvd/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-10 05:59:21,573: INFO: main: >>>>> stage Data Ingestion Stage started <<<<<<<]
+[2025-07-10 05:59:21,574: ERROR: main: DataIngestionTrainingPipeline.main() missing 1 required positional argument: 'self']
+Traceback (most recent call last):
+  File "C:\Users\tafnaz a\Documents\PLACEMENT TRAINING\Kidney-Disease-Classification\main.py", line 10, in <module>
+    obj.main()
+TypeError: DataIngestionTrainingPipeline.main() missing 1 required positional argument: 'self'
+[2025-07-10 05:59:46,616: INFO: main: >>>>> stage Data Ingestion Stage started <<<<<<<]
+[2025-07-10 05:59:46,619: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-10 05:59:46,620: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-10 05:59:46,622: INFO: common: craeted directory at:artifacts]
+[2025-07-10 05:59:46,623: INFO: common: craeted directory at:artifacts/data_ingestion]
+[2025-07-10 05:59:46,624: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1Vqh5Kn5aNg9qM2XMi3uvbwxaB9GJMpvd/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-10 06:07:21,077: ERROR: main: ('Connection broken: IncompleteRead(1182498620 bytes read, 444331096 more expected)', IncompleteRead(1182498620 bytes read, 444331096 more expected))]
+Traceback (most recent call last):
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\response.py", line 779, in _error_catcher
+    yield
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\response.py", line 925, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(1182498620 bytes read, 444331096 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\requests\models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\response.py", line 1091, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\response.py", line 1008, in read
+    data = self._raw_read(amt)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\response.py", line 903, in _raw_read
+    with self._error_catcher():
+  File "C:\ProjectWork\envs\kidney\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\response.py", line 803, in _error_catcher
+    raise ProtocolError(arg, e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(1182498620 bytes read, 444331096 more expected)', IncompleteRead(1182498620 bytes read, 444331096 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tafnaz a\Documents\PLACEMENT TRAINING\Kidney-Disease-Classification\main.py", line 10, in <module>
+    obj.main()
+  File "c:\users\tafnaz a\documents\placement training\kidney-disease-classification\src\cnnClassfier\pipeline\stage_01_data_ingestion.py", line 14, in main
+    data_ingestion.download_file()
+  File "c:\users\tafnaz a\documents\placement training\kidney-disease-classification\src\cnnClassfier\components\data_ingestion.py", line 31, in download_file
+    raise e
+  File "c:\users\tafnaz a\documents\placement training\kidney-disease-classification\src\cnnClassfier\components\data_ingestion.py", line 26, in download_file
+    gdown.download(prefix+file_id,zip_download_dir)
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\gdown\download.py", line 368, in download
+    for chunk in res.iter_content(chunk_size=CHUNK_SIZE):
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\requests\models.py", line 822, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(1182498620 bytes read, 444331096 more expected)', IncompleteRead(1182498620 bytes read, 444331096 more expected))
+[2025-07-10 06:08:00,098: INFO: main: >>>>> stage Data Ingestion Stage started <<<<<<<]
+[2025-07-10 06:08:00,100: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-10 06:08:00,102: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-10 06:08:00,103: INFO: common: craeted directory at:artifacts]
+[2025-07-10 06:08:00,104: INFO: common: craeted directory at:artifacts/data_ingestion]
+[2025-07-10 06:08:00,105: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1Vqh5Kn5aNg9qM2XMi3uvbwxaB9GJMpvd/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-10 06:51:32,450: ERROR: main: ('Connection broken: IncompleteRead(218622722 bytes read, 1408206994 more expected)', IncompleteRead(218622722 bytes read, 1408206994 more expected))]
+Traceback (most recent call last):
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\response.py", line 779, in _error_catcher
+    yield
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\response.py", line 925, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(218622722 bytes read, 1408206994 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\requests\models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\response.py", line 1091, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\response.py", line 1008, in read
+    data = self._raw_read(amt)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\response.py", line 903, in _raw_read
+    with self._error_catcher():
+  File "C:\ProjectWork\envs\kidney\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\response.py", line 803, in _error_catcher
+    raise ProtocolError(arg, e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(218622722 bytes read, 1408206994 more expected)', IncompleteRead(218622722 bytes read, 1408206994 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tafnaz a\Documents\PLACEMENT TRAINING\Kidney-Disease-Classification\main.py", line 10, in <module>
+    obj.main()
+  File "c:\users\tafnaz a\documents\placement training\kidney-disease-classification\src\cnnClassfier\pipeline\stage_01_data_ingestion.py", line 14, in main
+    data_ingestion.download_file()
+  File "c:\users\tafnaz a\documents\placement training\kidney-disease-classification\src\cnnClassfier\components\data_ingestion.py", line 31, in download_file
+    raise e
+  File "c:\users\tafnaz a\documents\placement training\kidney-disease-classification\src\cnnClassfier\components\data_ingestion.py", line 26, in download_file
+    gdown.download(prefix+file_id,zip_download_dir)
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\gdown\download.py", line 368, in download
+    for chunk in res.iter_content(chunk_size=CHUNK_SIZE):
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\requests\models.py", line 822, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(218622722 bytes read, 1408206994 more expected)', IncompleteRead(218622722 bytes read, 1408206994 more expected))
+[2025-07-10 08:55:17,293: INFO: main: >>>>> stage Data Ingestion Stage started <<<<<<<]
+[2025-07-10 08:55:17,299: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-10 08:55:17,304: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-10 08:55:17,309: INFO: common: craeted directory at:artifacts]
+[2025-07-10 08:55:17,322: INFO: common: craeted directory at:artifacts/data_ingestion]
+[2025-07-10 08:55:17,326: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1Vqh5Kn5aNg9qM2XMi3uvbwxaB9GJMpvd/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-10 08:55:19,329: ERROR: main: HTTPSConnectionPool(host='doc-08-24-docs.googleusercontent.com', port=443): Max retries exceeded with url: /docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/nbpr0g172etft53sf6dbp7vgrphqfm8u/1752117900000/14589950402045058757/*/1Vqh5Kn5aNg9qM2XMi3uvbwxaB9GJMpvd?uuid=004fd390-74f8-4cf6-a3dd-7b5a33dc36b4 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1016)')))]
+Traceback (most recent call last):
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\connection.py", line 790, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\connection.py", line 969, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\util\ssl_.py", line 480, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\util\ssl_.py", line 524, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "C:\ProjectWork\envs\kidney\Lib\ssl.py", line 1382, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1016)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+urllib3.exceptions.SSLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1016)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='doc-08-24-docs.googleusercontent.com', port=443): Max retries exceeded with url: /docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/nbpr0g172etft53sf6dbp7vgrphqfm8u/1752117900000/14589950402045058757/*/1Vqh5Kn5aNg9qM2XMi3uvbwxaB9GJMpvd?uuid=004fd390-74f8-4cf6-a3dd-7b5a33dc36b4 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1016)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tafnaz a\Documents\PLACEMENT TRAINING\Kidney-Disease-Classification\main.py", line 10, in <module>
+    obj.main()
+  File "c:\users\tafnaz a\documents\placement training\kidney-disease-classification\src\cnnClassfier\pipeline\stage_01_data_ingestion.py", line 14, in main
+    data_ingestion.download_file()
+  File "c:\users\tafnaz a\documents\placement training\kidney-disease-classification\src\cnnClassfier\components\data_ingestion.py", line 31, in download_file
+    raise e
+  File "c:\users\tafnaz a\documents\placement training\kidney-disease-classification\src\cnnClassfier\components\data_ingestion.py", line 26, in download_file
+    gdown.download(prefix+file_id,zip_download_dir)
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\gdown\download.py", line 202, in download
+    res = sess.get(url, stream=True, verify=verify)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\requests\sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\requests\sessions.py", line 724, in send
+    history = [resp for resp in gen]
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\requests\sessions.py", line 724, in <listcomp>
+    history = [resp for resp in gen]
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\requests\sessions.py", line 265, in resolve_redirects
+    resp = self.send(
+           ^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\requests\adapters.py", line 698, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='doc-08-24-docs.googleusercontent.com', port=443): Max retries exceeded with url: /docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/nbpr0g172etft53sf6dbp7vgrphqfm8u/1752117900000/14589950402045058757/*/1Vqh5Kn5aNg9qM2XMi3uvbwxaB9GJMpvd?uuid=004fd390-74f8-4cf6-a3dd-7b5a33dc36b4 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1016)')))
