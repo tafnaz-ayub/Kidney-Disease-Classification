@@ -1,0 +1,22 @@
+# Ignore zip files (like datasets or model files)
+*.zip
+
+# Ignore folders
+artifacts/
+logs/
+
+# Python-related ignores
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.env
+venv/
+env/
+
+# OS / Editor files
+.DS_Store
+*.swp
+.idea/
+.vscode/
