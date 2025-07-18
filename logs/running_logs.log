@@ -211,4 +211,211 @@ Traceback (most recent call last):
         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "C:\ProjectWork\envs\kidney\Lib\site-packages\requests\adapters.py", line 698, in send
     raise SSLError(e, request=request)
-requests.exceptions.SSLError: HTTPSConnectionPool(host='doc-08-24-docs.googleusercontent.com', port=443): Max retries exceeded with url: /docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/nbpr0g172etft53sf6dbp7vgrphqfm8u/1752117900000/14589950402045058757/*/1Vqh5Kn5aNg9qM2XMi3uvbwxaB9GJMpvd?uuid=004fd390-74f8-4cf6-a3dd-7b5a33dc36b4 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1016)')))
+requests.exceptions.SSLError: HTTPSConnectionPool(host='doc-08-24-docs.googleusercontent.com', port=443): Max retries exceeded with url: /docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/nbpr0g172etft53sf6dbp7vgrphqfm8u/1752117900000/14589950402045058757/*/1Vqh5Kn5aNg9qM2XMi3uvbwxaB9GJMpvd?uuid=004fd390-74f8-4cf6-a3dd-7b5a33dc36b4 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1016)')))[2025-07-18 21:08:13,373: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-18 21:08:13,393: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-18 21:08:13,398: INFO: common: craeted directory at:artifacts]
+[2025-07-18 21:08:13,401: INFO: common: craeted directory at:artifacts/prepare_base_model]
+[2025-07-18 21:09:17,447: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-18 21:09:17,454: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-18 21:09:17,457: INFO: common: craeted directory at:artifacts]
+[2025-07-18 21:09:17,459: INFO: common: craeted directory at:artifacts/prepare_base_model]
+[2025-07-18 21:11:00,478: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-18 21:11:00,507: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-18 21:11:00,510: INFO: common: craeted directory at:artifacts]
+[2025-07-18 21:11:00,512: INFO: common: craeted directory at:artifacts/prepare_base_model]
+[2025-07-18 21:39:00,281: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-18 21:39:00,285: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-18 21:39:00,288: INFO: common: craeted directory at:artifacts]
+[2025-07-18 21:39:00,291: INFO: common: craeted directory at:artifacts/prepare_base_model]
+[2025-07-18 21:39:34,913: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-07-18 22:08:33,711: INFO: main: >>>>> stage Data Ingestion Stage started <<<<<<<]
+[2025-07-18 22:08:33,717: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-18 22:08:33,720: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-18 22:08:33,722: INFO: common: craeted directory at:artifacts]
+[2025-07-18 22:08:33,739: INFO: common: craeted directory at:artifacts/data_ingestion]
+[2025-07-18 22:08:33,741: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1Vqh5Kn5aNg9qM2XMi3uvbwxaB9GJMpvd/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-18 22:17:37,123: ERROR: main: ('Connection broken: IncompleteRead(600386280 bytes read, 1026443436 more expected)', IncompleteRead(600386280 bytes read, 1026443436 more expected))]
+Traceback (most recent call last):
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\response.py", line 779, in _error_catcher
+    yield
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\response.py", line 925, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(600386280 bytes read, 1026443436 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\requests\models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\response.py", line 1091, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\response.py", line 1008, in read
+    data = self._raw_read(amt)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\response.py", line 903, in _raw_read
+    with self._error_catcher():
+  File "C:\ProjectWork\envs\kidney\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\response.py", line 803, in _error_catcher
+    raise ProtocolError(arg, e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(600386280 bytes read, 1026443436 more expected)', IncompleteRead(600386280 bytes read, 1026443436 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tafnaz a\Documents\PLACEMENT TRAINING\Kidney-Disease-Classification\main.py", line 10, in <module>
+    obj.main()
+  File "c:\users\tafnaz a\documents\placement training\kidney-disease-classification\src\cnnClassfier\pipeline\stage_01_data_ingestion.py", line 14, in main
+    data_ingestion.download_file()
+  File "c:\users\tafnaz a\documents\placement training\kidney-disease-classification\src\cnnClassfier\components\data_ingestion.py", line 31, in download_file
+    raise e
+  File "c:\users\tafnaz a\documents\placement training\kidney-disease-classification\src\cnnClassfier\components\data_ingestion.py", line 26, in download_file
+    gdown.download(prefix+file_id,zip_download_dir,fuzzy=True,resume=True)
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\gdown\download.py", line 368, in download
+    for chunk in res.iter_content(chunk_size=CHUNK_SIZE):
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\requests\models.py", line 822, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(600386280 bytes read, 1026443436 more expected)', IncompleteRead(600386280 bytes read, 1026443436 more expected))
+[2025-07-18 22:17:56,369: INFO: main: >>>>> stage Data Ingestion Stage started <<<<<<<]
+[2025-07-18 22:17:56,373: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-18 22:17:56,375: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-18 22:17:56,375: INFO: common: craeted directory at:artifacts]
+[2025-07-18 22:17:56,377: INFO: common: craeted directory at:artifacts/data_ingestion]
+[2025-07-18 22:17:56,378: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1Vqh5Kn5aNg9qM2XMi3uvbwxaB9GJMpvd/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-18 22:17:56,392: ERROR: main: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?id=1Vqh5Kn5aNg9qM2XMi3uvbwxaB9GJMpvd (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001B9685E5F10>: Failed to resolve 'drive.google.com' ([Errno 11001] getaddrinfo failed)"))]
+Traceback (most recent call last):
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\socket.py", line 974, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x000001B9685E5F10>: Failed to resolve 'drive.google.com' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?id=1Vqh5Kn5aNg9qM2XMi3uvbwxaB9GJMpvd (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001B9685E5F10>: Failed to resolve 'drive.google.com' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tafnaz a\Documents\PLACEMENT TRAINING\Kidney-Disease-Classification\main.py", line 10, in <module>
+    obj.main()
+  File "c:\users\tafnaz a\documents\placement training\kidney-disease-classification\src\cnnClassfier\pipeline\stage_01_data_ingestion.py", line 14, in main
+    data_ingestion.download_file()
+  File "c:\users\tafnaz a\documents\placement training\kidney-disease-classification\src\cnnClassfier\components\data_ingestion.py", line 31, in download_file
+    raise e
+  File "c:\users\tafnaz a\documents\placement training\kidney-disease-classification\src\cnnClassfier\components\data_ingestion.py", line 26, in download_file
+    gdown.download(prefix+file_id,zip_download_dir,fuzzy=True,resume=True)
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\gdown\download.py", line 202, in download
+    res = sess.get(url, stream=True, verify=verify)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\requests\sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?id=1Vqh5Kn5aNg9qM2XMi3uvbwxaB9GJMpvd (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001B9685E5F10>: Failed to resolve 'drive.google.com' ([Errno 11001] getaddrinfo failed)"))
+[2025-07-18 22:18:22,445: INFO: main: >>>>> stage Data Ingestion Stage started <<<<<<<]
+[2025-07-18 22:18:22,448: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-18 22:18:22,451: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-18 22:18:22,452: INFO: common: craeted directory at:artifacts]
+[2025-07-18 22:18:22,453: INFO: common: craeted directory at:artifacts/data_ingestion]
+[2025-07-18 22:18:22,454: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1Vqh5Kn5aNg9qM2XMi3uvbwxaB9GJMpvd/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-18 22:28:23,652: ERROR: main: ('Connection broken: IncompleteRead(828647686 bytes read, 197872270 more expected)', IncompleteRead(828647686 bytes read, 197872270 more expected))]
+Traceback (most recent call last):
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\response.py", line 779, in _error_catcher
+    yield
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\response.py", line 925, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(828647686 bytes read, 197872270 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\requests\models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\response.py", line 1091, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\response.py", line 1008, in read
+    data = self._raw_read(amt)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\response.py", line 903, in _raw_read
+    with self._error_catcher():
+  File "C:\ProjectWork\envs\kidney\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\urllib3\response.py", line 803, in _error_catcher
+    raise ProtocolError(arg, e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(828647686 bytes read, 197872270 more expected)', IncompleteRead(828647686 bytes read, 197872270 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tafnaz a\Documents\PLACEMENT TRAINING\Kidney-Disease-Classification\main.py", line 10, in <module>
+    obj.main()
+  File "c:\users\tafnaz a\documents\placement training\kidney-disease-classification\src\cnnClassfier\pipeline\stage_01_data_ingestion.py", line 14, in main
+    data_ingestion.download_file()
+  File "c:\users\tafnaz a\documents\placement training\kidney-disease-classification\src\cnnClassfier\components\data_ingestion.py", line 31, in download_file
+    raise e
+  File "c:\users\tafnaz a\documents\placement training\kidney-disease-classification\src\cnnClassfier\components\data_ingestion.py", line 26, in download_file
+    gdown.download(prefix+file_id,zip_download_dir,fuzzy=True,resume=True)
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\gdown\download.py", line 368, in download
+    for chunk in res.iter_content(chunk_size=CHUNK_SIZE):
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\requests\models.py", line 822, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(828647686 bytes read, 197872270 more expected)', IncompleteRead(828647686 bytes read, 197872270 more expected))
+[2025-07-18 22:29:01,086: INFO: main: >>>>> stage Data Ingestion Stage started <<<<<<<]
+[2025-07-18 22:29:01,103: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-18 22:29:01,121: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-18 22:29:01,122: INFO: common: craeted directory at:artifacts]
+[2025-07-18 22:29:01,123: INFO: common: craeted directory at:artifacts/data_ingestion]
+[2025-07-18 22:29:01,123: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1Vqh5Kn5aNg9qM2XMi3uvbwxaB9GJMpvd/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-18 22:30:25,413: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1Vqh5Kn5aNg9qM2XMi3uvbwxaB9GJMpvd/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-18 22:31:04,914: INFO: main: >>>>> stage Data Ingestion Stage completed <<<<<<<]
+[2025-07-18 22:31:04,914: INFO: main: >>>>> stage Prepare base model started <<<<<<<]
+[2025-07-18 22:31:04,917: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-18 22:31:04,921: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-18 22:31:04,922: INFO: common: craeted directory at:artifacts]
+[2025-07-18 22:31:04,924: INFO: common: craeted directory at:artifacts/prepare_base_model]
+[2025-07-18 22:31:05,942: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-07-18 22:31:06,391: INFO: main: >>>>> stage Prepare base model completed <<<<<<<]
