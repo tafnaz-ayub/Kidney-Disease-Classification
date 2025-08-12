@@ -681,3 +681,72 @@ PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x
 [2025-08-11 20:54:14,200: INFO: common: craeted directory at:artifacts]
 [2025-08-11 20:54:14,201: INFO: common: craeted directory at:artifacts\training]
 [2025-08-11 21:17:11,487: INFO: main: >>>>> stage Training completed <<<<<<<]
+[2025-08-12 19:29:18,582: INFO: stage_01_data_ingestion: >>>>> stage Data Ingestion Stage started <<<<<<<]
+[2025-08-12 19:29:18,583: ERROR: stage_01_data_ingestion: DataIngestionTrainingPipeline.main() missing 1 required positional argument: 'self']
+Traceback (most recent call last):
+  File "C:\Users\tafnaz a\Documents\PLACEMENT TRAINING\Kidney-Disease-Classification\src\cnnClassfier\pipeline\stage_01_data_ingestion.py", line 21, in <module>
+    obj.main()
+TypeError: DataIngestionTrainingPipeline.main() missing 1 required positional argument: 'self'
+[2025-08-12 19:30:00,191: INFO: stage_01_data_ingestion: >>>>> stage Data Ingestion Stage started <<<<<<<]
+[2025-08-12 19:30:00,192: ERROR: stage_01_data_ingestion: DataIngestionTrainingPipeline.main() missing 1 required positional argument: 'self']
+Traceback (most recent call last):
+  File "C:\Users\tafnaz a\Documents\PLACEMENT TRAINING\Kidney-Disease-Classification\src\cnnClassfier\pipeline\stage_01_data_ingestion.py", line 21, in <module>
+    obj.main()
+TypeError: DataIngestionTrainingPipeline.main() missing 1 required positional argument: 'self'
+[2025-08-12 19:33:32,905: INFO: stage_01_data_ingestion: >>>>> stage Data Ingestion Stage started <<<<<<<]
+[2025-08-12 19:33:32,910: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-12 19:33:32,914: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-12 19:33:32,916: INFO: common: craeted directory at:artifacts]
+[2025-08-12 19:33:32,917: INFO: common: craeted directory at:artifacts/data_ingestion]
+[2025-08-12 19:33:32,918: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1Vqh5Kn5aNg9qM2XMi3uvbwxaB9GJMpvd/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-08-12 19:46:44,855: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1Vqh5Kn5aNg9qM2XMi3uvbwxaB9GJMpvd/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-08-12 19:47:24,286: INFO: stage_01_data_ingestion: >>>>> stage Data Ingestion Stage completed <<<<<<<]
+[2025-08-12 19:51:41,034: INFO: stage_02_prepare_base_model: >>>>> stage Prepare base model started <<<<<<<]
+[2025-08-12 19:51:41,054: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-12 19:51:41,057: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-12 19:51:41,058: INFO: common: craeted directory at:artifacts]
+[2025-08-12 19:51:41,059: INFO: common: craeted directory at:artifacts/prepare_base_model]
+[2025-08-12 19:51:42,005: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-08-12 19:51:42,337: INFO: stage_02_prepare_base_model: >>>>> stage Prepare base model completed <<<<<<<]
+[2025-08-12 19:52:02,233: INFO: stage_03_model_training: >>>>> stage Training started <<<<<<<]
+[2025-08-12 19:52:02,236: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-12 19:52:02,239: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-12 19:52:02,240: INFO: common: craeted directory at:artifacts]
+[2025-08-12 19:52:02,241: INFO: common: craeted directory at:artifacts\training]
+[2025-08-12 21:02:05,409: INFO: stage_03_model_training: >>>>> stage Training completed <<<<<<<]
+[2025-08-12 21:02:30,714: INFO: stage_04_model_evaluation: >>>>> stage Evaluation stage started <<<<<<<]
+[2025-08-12 21:02:30,718: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-12 21:02:30,721: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-12 21:02:30,722: INFO: common: craeted directory at:artifacts]
+[2025-08-12 21:09:09,254: INFO: common: json file saved at: scores.json]
+[2025-08-12 21:09:12,093: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2025-08-12 21:09:13,068: INFO: builder_impl: Assets written to: C:\Users\TAFNAZ~1\AppData\Local\Temp\tmp4x7sys9p\model\data\model\assets]
+[2025-08-12 21:09:41,634: ERROR: stage_04_model_evaluation: No module named 'distutils._modified']
+Traceback (most recent call last):
+  File "C:\Users\tafnaz a\Documents\PLACEMENT TRAINING\Kidney-Disease-Classification\src\cnnClassfier\pipeline\stage_04_model_evaluation.py", line 21, in <module>
+    obj.main()
+  File "C:\Users\tafnaz a\Documents\PLACEMENT TRAINING\Kidney-Disease-Classification\src\cnnClassfier\pipeline\stage_04_model_evaluation.py", line 15, in main
+    evaluation.log_into_mlflow()
+  File "c:\users\tafnaz a\documents\placement training\kidney-disease-classification\src\cnnClassfier\components\model_evaluation.py", line 72, in log_into_mlflow
+    mlflow.keras.log_model(self.model, "model")
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\mlflow\tensorflow\__init__.py", line 222, in log_model
+    return Model.log(
+           ^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\mlflow\models\model.py", line 552, in log
+    mlflow.tracking.fluent.log_artifacts(local_path, mlflow_model.artifact_path)
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\mlflow\tracking\fluent.py", line 817, in log_artifacts
+    MlflowClient().log_artifacts(run_id, local_dir, artifact_path)
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\mlflow\tracking\client.py", line 1069, in log_artifacts
+    self._tracking_client.log_artifacts(run_id, local_dir, artifact_path)
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 448, in log_artifacts
+    self._get_artifact_repo(run_id).log_artifacts(local_dir, artifact_path)
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\mlflow\store\artifact\local_artifact_repo.py", line 58, in log_artifacts
+    dir_util.copy_tree(src=local_dir, dst=artifact_dir, preserve_mode=0, preserve_times=0)
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\setuptools\_distutils\dir_util.py", line 150, in copy_tree
+    return list(itertools.chain.from_iterable(map(copy_one, names)))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\setuptools\_distutils\dir_util.py", line 192, in _copy_one
+    file_util.copy_file(
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\setuptools\_distutils\file_util.py", line 104, in copy_file
+    from distutils._modified import newer
+ModuleNotFoundError: No module named 'distutils._modified'

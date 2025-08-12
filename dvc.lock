@@ -1,0 +1,81 @@
+schema: '2.0'
+stages:
+  data_ingestion:
+    cmd: python src/cnnClassfier/pipeline/stage_01_data_ingestion.py
+    deps:
+    - path: config/config.yaml
+      hash: md5
+      md5: 0c795d6e80f11d67b5eb6800590fbca5
+      size: 574
+    - path: src/cnnClassfier/pipeline/stage_01_data_ingestion.py
+      hash: md5
+      md5: 4f71de198670a0d19ca5687696560d6b
+      size: 881
+    outs:
+    - path: artifacts/data_ingestion/CT-KIDNEY-DATASET-Normal-Cyst-Tumor-Stone
+      hash: md5
+      md5: 480f02db6967e2017d804fca0430c1a4.dir
+      size: 1661580918
+      nfiles: 12446
+  prepare_base_model:
+    cmd: python src/cnnClassfier/pipeline/stage_02_prepare_base_model.py
+    deps:
+    - path: config/config.yaml
+      hash: md5
+      md5: 0c795d6e80f11d67b5eb6800590fbca5
+      size: 574
+    - path: src/cnnClassfier/pipeline/stage_02_prepare_base_model.py
+      hash: md5
+      md5: 13c327e06e0f279de9d6d486de115dd9
+      size: 921
+    params:
+      params.yaml:
+        CLASSES: 4
+        IMAGE_SIZE:
+        - 224
+        - 224
+        - 3
+        INCLUDE_TOP: false
+        LEARNING_RATE: 0.01
+        WEIGHTS: imagenet
+    outs:
+    - path: artifacts/prepare_base_model
+      hash: md5
+      md5: f7c0592a2d5d003c85451f7ae498fd3a.dir
+      size: 118255264
+      nfiles: 2
+  training:
+    cmd: python src/cnnClassfier/pipeline/stage_03_model_training.py
+    deps:
+    - path: artifacts/data_ingestion/CT-KIDNEY-DATASET-Normal-Cyst-Tumor-Stone
+      hash: md5
+      md5: 480f02db6967e2017d804fca0430c1a4.dir
+      size: 1661580918
+      nfiles: 12446
+    - path: artifacts/prepare_base_model
+      hash: md5
+      md5: f7c0592a2d5d003c85451f7ae498fd3a.dir
+      size: 118255264
+      nfiles: 2
+    - path: config/config.yaml
+      hash: md5
+      md5: 0c795d6e80f11d67b5eb6800590fbca5
+      size: 574
+    - path: src/cnnClassfier/pipeline/stage_03_model_training.py
+      hash: md5
+      md5: d7c9cf0d1408301e24945554a7b37b27
+      size: 839
+    params:
+      params.yaml:
+        AUGMENTATION: true
+        BATCH_SIZE: 16
+        EPOCHS: 3
+        IMAGE_SIZE:
+        - 224
+        - 224
+        - 3
+    outs:
+    - path: artifacts/training/model.h5
+      hash: md5
+      md5: 0c6acab98ab4e43e141c148b58959cfc
+      size: 59738928

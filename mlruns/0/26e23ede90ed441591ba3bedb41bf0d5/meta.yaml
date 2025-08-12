@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/tafnaz%20a/Documents/PLACEMENT%20TRAINING/Kidney-Disease-Classification/mlruns/0/26e23ede90ed441591ba3bedb41bf0d5/artifacts
+end_time: 1755013181629
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 26e23ede90ed441591ba3bedb41bf0d5
+run_name: bald-panda-66
+run_uuid: 26e23ede90ed441591ba3bedb41bf0d5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1755013149772
+status: 4
+tags: []
+user_id: tafnaz a
