@@ -27,3 +27,8 @@ conda activate kidney
 ```bash
 pip install -r requirements.txt
 ```
+DVC Pipeline
+```
+dvc init
+dvc repro
+```
