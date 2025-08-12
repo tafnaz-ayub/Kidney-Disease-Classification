@@ -419,3 +419,265 @@ requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(82
 [2025-07-18 22:31:04,924: INFO: common: craeted directory at:artifacts/prepare_base_model]
 [2025-07-18 22:31:05,942: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
 [2025-07-18 22:31:06,391: INFO: main: >>>>> stage Prepare base model completed <<<<<<<]
+[2025-07-19 12:28:27,656: INFO: main: >>>>> stage Data Ingestion Stage started <<<<<<<]
+[2025-07-19 12:28:27,690: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-19 12:28:27,702: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-19 12:28:27,703: INFO: common: craeted directory at:artifacts]
+[2025-07-19 12:28:27,704: INFO: common: craeted directory at:artifacts/data_ingestion]
+[2025-07-19 12:28:27,705: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1Vqh5Kn5aNg9qM2XMi3uvbwxaB9GJMpvd/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-19 12:28:31,211: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1Vqh5Kn5aNg9qM2XMi3uvbwxaB9GJMpvd/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-19 12:29:01,724: INFO: main: >>>>> stage Training started <<<<<<<]
+[2025-07-19 12:29:01,728: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-19 12:29:01,730: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-19 12:29:01,731: INFO: common: craeted directory at:artifacts]
+[2025-07-19 12:29:01,732: INFO: common: craeted directory at:artifacts\training]
+[2025-07-19 12:49:44,345: ERROR: main: Graph execution error:
+
+UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x000001B207C0AF20>
+Traceback (most recent call last):
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\tensorflow\python\ops\script_ops.py", line 267, in __call__
+    ret = func(*args)
+          ^^^^^^^^^^^
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\tensorflow\python\autograph\impl\api.py", line 642, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\tensorflow\python\data\ops\from_generator_op.py", line 198, in generator_py_func
+    values = next(generator_state.get_iterator(iterator_id))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\keras\engine\data_adapter.py", line 902, in wrapped_generator
+    for data in generator_fn():
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\keras\engine\data_adapter.py", line 1049, in generator_fn
+    yield x[i]
+          ~^^^
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\keras\preprocessing\image.py", line 116, in __getitem__
+    return self._get_batches_of_transformed_samples(index_array)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\keras\preprocessing\image.py", line 370, in _get_batches_of_transformed_samples
+    img = image_utils.load_img(
+          ^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\keras\utils\image_utils.py", line 423, in load_img
+    img = pil_image.open(io.BytesIO(f.read()))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\PIL\Image.py", line 3580, in open
+    raise UnidentifiedImageError(msg)
+
+PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x000001B207C0AF20>
+
+
+	 [[{{node PyFunc}}]]
+	 [[IteratorGetNext]] [Op:__inference_test_function_3629]]
+Traceback (most recent call last):
+  File "C:\Users\tafnaz a\Documents\PLACEMENT TRAINING\Kidney-Disease-Classification\main.py", line 30, in <module>
+    obj.main()
+  File "c:\users\tafnaz a\documents\placement training\kidney-disease-classification\src\cnnClassfier\pipeline\stage_03_model_training.py", line 16, in main
+    training.train()
+  File "c:\users\tafnaz a\documents\placement training\kidney-disease-classification\src\cnnClassfier\components\model_training.py", line 97, in train
+    self.model.fit(
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\tensorflow\python\eager\execute.py", line 58, in quick_execute
+    except TypeError as e:
+tensorflow.python.framework.errors_impl.UnknownError: Graph execution error:
+
+UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x000001B207C0AF20>
+Traceback (most recent call last):
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\tensorflow\python\ops\script_ops.py", line 267, in __call__
+    ret = func(*args)
+          ^^^^^^^^^^^
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\tensorflow\python\autograph\impl\api.py", line 642, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\tensorflow\python\data\ops\from_generator_op.py", line 198, in generator_py_func
+    values = next(generator_state.get_iterator(iterator_id))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\keras\engine\data_adapter.py", line 902, in wrapped_generator
+    for data in generator_fn():
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\keras\engine\data_adapter.py", line 1049, in generator_fn
+    yield x[i]
+          ~^^^
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\keras\preprocessing\image.py", line 116, in __getitem__
+    return self._get_batches_of_transformed_samples(index_array)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\keras\preprocessing\image.py", line 370, in _get_batches_of_transformed_samples
+    img = image_utils.load_img(
+          ^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\keras\utils\image_utils.py", line 423, in load_img
+    img = pil_image.open(io.BytesIO(f.read()))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\PIL\Image.py", line 3580, in open
+    raise UnidentifiedImageError(msg)
+
+PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x000001B207C0AF20>
+
+
+	 [[{{node PyFunc}}]]
+	 [[IteratorGetNext]] [Op:__inference_test_function_3629]
+[2025-07-19 13:09:21,267: INFO: main: >>>>> stage Training started <<<<<<<]
+[2025-07-19 13:09:21,273: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-19 13:09:21,290: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-19 13:09:21,292: INFO: common: craeted directory at:artifacts]
+[2025-07-19 13:09:21,293: INFO: common: craeted directory at:artifacts\training]
+[2025-07-19 13:09:22,136: ERROR: main: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\kidney-ct-scan-image']
+Traceback (most recent call last):
+  File "C:\Users\tafnaz a\Documents\PLACEMENT TRAINING\Kidney-Disease-Classification\main.py", line 30, in <module>
+    obj.main()
+  File "c:\users\tafnaz a\documents\placement training\kidney-disease-classification\src\cnnClassfier\pipeline\stage_03_model_training.py", line 15, in main
+    training.train_valid_generator()
+  File "c:\users\tafnaz a\documents\placement training\kidney-disease-classification\src\cnnClassfier\components\model_training.py", line 36, in train_valid_generator
+    self.valid_generator = valid_datagenerator.flow_from_directory(
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\keras\preprocessing\image.py", line 1648, in flow_from_directory
+    return DirectoryIterator(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\keras\preprocessing\image.py", line 563, in __init__
+    for subdir in sorted(os.listdir(directory)):
+                         ^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\kidney-ct-scan-image'
+[2025-07-19 13:10:19,561: INFO: main: >>>>> stage Training started <<<<<<<]
+[2025-07-19 13:10:19,566: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-19 13:10:19,570: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-19 13:10:19,571: INFO: common: craeted directory at:artifacts]
+[2025-07-19 13:10:19,572: INFO: common: craeted directory at:artifacts\training]
+[2025-07-19 13:32:56,741: ERROR: main: Graph execution error:
+
+UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x0000025769AEE160>
+Traceback (most recent call last):
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\tensorflow\python\ops\script_ops.py", line 267, in __call__
+    ret = func(*args)
+          ^^^^^^^^^^^
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\tensorflow\python\autograph\impl\api.py", line 642, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\tensorflow\python\data\ops\from_generator_op.py", line 198, in generator_py_func
+    values = next(generator_state.get_iterator(iterator_id))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\keras\engine\data_adapter.py", line 902, in wrapped_generator
+    for data in generator_fn():
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\keras\engine\data_adapter.py", line 1049, in generator_fn
+    yield x[i]
+          ~^^^
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\keras\preprocessing\image.py", line 116, in __getitem__
+    return self._get_batches_of_transformed_samples(index_array)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\keras\preprocessing\image.py", line 370, in _get_batches_of_transformed_samples
+    img = image_utils.load_img(
+          ^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\keras\utils\image_utils.py", line 423, in load_img
+    img = pil_image.open(io.BytesIO(f.read()))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\PIL\Image.py", line 3580, in open
+    raise UnidentifiedImageError(msg)
+
+PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x0000025769AEE160>
+
+
+	 [[{{node PyFunc}}]]
+	 [[IteratorGetNext]] [Op:__inference_test_function_3629]]
+Traceback (most recent call last):
+  File "C:\Users\tafnaz a\Documents\PLACEMENT TRAINING\Kidney-Disease-Classification\main.py", line 30, in <module>
+    obj.main()
+  File "c:\users\tafnaz a\documents\placement training\kidney-disease-classification\src\cnnClassfier\pipeline\stage_03_model_training.py", line 16, in main
+    training.train()
+  File "c:\users\tafnaz a\documents\placement training\kidney-disease-classification\src\cnnClassfier\components\model_training.py", line 75, in train
+    self.model.fit(
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\tensorflow\python\eager\execute.py", line 58, in quick_execute
+    except TypeError as e:
+tensorflow.python.framework.errors_impl.UnknownError: Graph execution error:
+
+UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x0000025769AEE160>
+Traceback (most recent call last):
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\tensorflow\python\ops\script_ops.py", line 267, in __call__
+    ret = func(*args)
+          ^^^^^^^^^^^
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\tensorflow\python\autograph\impl\api.py", line 642, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\tensorflow\python\data\ops\from_generator_op.py", line 198, in generator_py_func
+    values = next(generator_state.get_iterator(iterator_id))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\keras\engine\data_adapter.py", line 902, in wrapped_generator
+    for data in generator_fn():
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\keras\engine\data_adapter.py", line 1049, in generator_fn
+    yield x[i]
+          ~^^^
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\keras\preprocessing\image.py", line 116, in __getitem__
+    return self._get_batches_of_transformed_samples(index_array)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\keras\preprocessing\image.py", line 370, in _get_batches_of_transformed_samples
+    img = image_utils.load_img(
+          ^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\keras\utils\image_utils.py", line 423, in load_img
+    img = pil_image.open(io.BytesIO(f.read()))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\ProjectWork\envs\kidney\Lib\site-packages\PIL\Image.py", line 3580, in open
+    raise UnidentifiedImageError(msg)
+
+PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x0000025769AEE160>
+
+
+	 [[{{node PyFunc}}]]
+	 [[IteratorGetNext]] [Op:__inference_test_function_3629]
+[2025-07-19 13:33:38,099: INFO: main: >>>>> stage Training started <<<<<<<]
+[2025-07-19 13:33:38,103: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-19 13:33:38,106: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-19 13:33:38,107: INFO: common: craeted directory at:artifacts]
+[2025-07-19 13:33:38,108: INFO: common: craeted directory at:artifacts\training]
+[2025-08-11 20:43:51,718: INFO: main: >>>>> stage Data Ingestion Stage started <<<<<<<]
+[2025-08-11 20:43:51,722: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-11 20:43:51,738: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-11 20:43:51,740: INFO: common: craeted directory at:artifacts]
+[2025-08-11 20:43:51,741: INFO: common: craeted directory at:artifacts/data_ingestion]
+[2025-08-11 20:43:51,743: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1Vqh5Kn5aNg9qM2XMi3uvbwxaB9GJMpvd/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-08-11 20:53:40,550: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1Vqh5Kn5aNg9qM2XMi3uvbwxaB9GJMpvd/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-08-11 20:54:12,838: INFO: main: >>>>> stage Data Ingestion Stage completed <<<<<<<]
+[2025-08-11 20:54:12,838: INFO: main: >>>>> stage Prepare base model started <<<<<<<]
+[2025-08-11 20:54:12,843: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-11 20:54:12,846: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-11 20:54:12,847: INFO: common: craeted directory at:artifacts]
+[2025-08-11 20:54:12,849: INFO: common: craeted directory at:artifacts/prepare_base_model]
+[2025-08-11 20:54:13,848: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-08-11 20:54:14,193: INFO: main: >>>>> stage Prepare base model completed <<<<<<<]
+[2025-08-11 20:54:14,194: INFO: main: >>>>> stage Training started <<<<<<<]
+[2025-08-11 20:54:14,197: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-11 20:54:14,199: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-11 20:54:14,200: INFO: common: craeted directory at:artifacts]
+[2025-08-11 20:54:14,201: INFO: common: craeted directory at:artifacts\training]
+[2025-08-11 21:17:11,487: INFO: main: >>>>> stage Training completed <<<<<<<]
