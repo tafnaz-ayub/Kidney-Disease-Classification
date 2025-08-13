@@ -31,4 +31,5 @@ DVC Pipeline
 ```
 dvc init
 dvc repro
+dvc dag
 ```

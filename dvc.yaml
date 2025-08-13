@@ -51,4 +51,4 @@ stages:
       - BATCH_SIZE
     metrics:
     - scores.json:
-        cache: false
+        cache: true
